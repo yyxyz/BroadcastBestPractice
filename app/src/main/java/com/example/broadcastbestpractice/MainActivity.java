@@ -10,8 +10,9 @@ public class MainActivity extends BaseActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
+    
         Button forceOffline = (Button) findViewById(R.id.force_offline);
         forceOffline.setOnClickListener(v->{
             //插入广播通知用户强制下线， 强制下线的功能不能依附于任何界面，
